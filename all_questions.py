@@ -1,4 +1,4 @@
-# Answer found in Q5 in Question Bank 1 (Tan et al, 2nd ed)
+ Answer found in Q5 in Question Bank 1 (Tan et al, 2nd ed)
 #import student_code_with_answers.utils as u
 import utils as u
 
@@ -64,7 +64,6 @@ def question1():
 
     # Fill up `construct_tree``  
     # tree, training_error = construct_tree()
-    import utils as u
     tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
     A = tree.insert_left("radon")
     B = tree.insert_right("cough")
@@ -74,30 +73,6 @@ def question1():
 
     return answer
 
-#Q1 Calculations 
-#Entire Dataset
-import math
-entropy = -(5/10) * math.log2(5/10) - (5/10) * math.log2(5/10) 
-#Smoking
-split = -(4/5) * math.log2(4/5) - (1/5) * math.log2(1/5)
-split = -(1/5) * math.log2(1/5) - (4/5) * math.log(4/5)
-gain = entropy - split
-print(gain)
-#Radon
-split = -(2/5) * math.log2(2/5) - (0/5) * math.log2(0/5)
-split = -(3/5) * math.log2(3/5) - (5/5) * math.log2(5/5)
-gain = entropy - split
-print(gain)
-#Chronic Cough
-split = -(4/5) * math.log2(4/5) - (3/5) * math.log2(3/5)
-split = -(1/5) * math.log2(1/5) - (2/5) * math.log2(2/5)
-gain  = entropy - split
-print(gain)
-#Weight loss
-split = -(3/5) * math.log2(3/5) - (2/5) * math.log2(2/5)
-split = -(2/5) * math.log2(2/5) - (3/5) * math.log2(3/5)
-gain = entropy - split
-print(gain)
 
 # ----------------------------------------------------------------------
 
@@ -119,7 +94,7 @@ def question2():
     # Answer is an instance of BinaryTree
     tree = u.BinaryTree("y <= 0.6")
     answer["(d) full decision tree"] = tree
-    tree = u.BinaryTree("y <= 0.6")
+     tree = u.BinaryTree("y <= 0.6")
     tree.insert_left("Yes")
     tree.insert_right("No")
     b = tree.insert_right("x <= 0.7")
@@ -141,30 +116,6 @@ def question2():
     b.insert_left("A")
     b.insert_right("B")
     return answer
-
-
-#Q2 Calculations 
-#Entire Dataset
-#Class A = 0.41, Class B = 0.46, Class C = 0.13
-import math
-entropy = -(0.41) * math.log2(0.41) + (0.46) * math.log2(0.46) + (0.13) * math.log2(0.13) 
-print(entropy)
-# x <= 0.2
-entropy.r1 = -(0.16/0.2) * math.log2(0.16/0.2) + (0.04/0.2) * math.log2(0.04/0.2)
-print(entropy.r1)
-entropy.r2 = -(0.09/0.8) * math.log2(0.09/0.8) + (0.09/0.8) * math.log2(0.09/0.8) + (0.32/0.8) * math.log2(0.32/0.8) + (0.32/0.8) * math.log2(0.32/0.8)
-print(entropy.r2)
-# x <= 0.7
-entropy.r1 = -(0.2/0.7) * math.log2(0.2/0.7) + (0.04/0.7) * math.log2(0.04/0.7) 
-print(entropy.r1)
-entropy.r2 = -(0.09/0.3) * math.log2(0.09/0.3) + (0.12/0.3) * math.log2(0.12/0.3) + (0.09/0.3) * math.log2(0.09/0.3)
-print(entropy.r2)
-# y <= 0.6
-entropy.r1 = -(0.32/0.4) * math.log2(0.32/0.4) + (0.04/0.4) * math.log2(0.04/0.4) + (0.04/0.4) * math.log2(0.04/0.4)
-print(entropy.r1)
-entropy.r2 = -(0.09/0.6) * math.log2(0.09/0.6) + (0.42/0.6) * math.log2(0.42/0.6) + (0.09/0.6) * math.log2(0.09/0.6)
-print(entropy.r2)
-
 # ----------------------------------------------------------------------
 
 def question3():
@@ -184,25 +135,6 @@ def question3():
 
     return answer
 
-#Calculations
-#Entire Dataset
-gini = 1 - (10/20)^2 - (10/20)^2 
-#Part b
-gini = 1 - (0/1)^2 - (1/1)^2
-#Part c
-gini.m = 1 - (6/10)^2 - (4/10)^2
-gini.f = 1 - (4/10)^2 - (6/10)^2
-
-#Part d
-gini.f = 1 - (1/4)^2 - (3/4)^2
-gini.s = 1 - (0/8)^2 - (8/8)^2
-gini.l = 1 - (1/8)^2 - (7/8)^2
-
-#Part e
-gini.s = 1 - (3/5)^2 - (2/5)^2
-gini.m = 1 - (3/7)^2 - (4/7)^2
-gini.lg = 1 - (2/4)^2 - (2/4)^2
-gini.xl = 1 - (2/4)^2 - (2/4)^2
 
 # ----------------------------------------------------------------------
 # Answers in th form [str1, str2, str3]
