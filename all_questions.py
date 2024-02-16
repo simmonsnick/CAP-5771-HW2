@@ -141,21 +141,21 @@ entropy_r1 = -(0.16/0.2) * math.log2(0.16/0.2) - (0.04/0.2) * math.log2(0.04/0.2
 print(entropy_r1)
 entropy_r2 =  -(0.09/0.8) * math.log2(0.09/0.8) - (0.3/0.8) * math.log2(0.3/0.8) - (0.41/0.8) * math.log2(0.41/0.8)
 print(entropy_r2)
-print('values for x<=0.2')
+print('values for x<0.2')
 print(entropy - 0.2*entropy_r1 - 0.8*entropy_r2)
 # x <= 0.7
 entropy_r3 = -(0.2/0.7) * math.log2(0.2/0.7) + (0.04/0.7) * math.log2(0.04/0.7) 
 print(entropy_r3)
 entropy_r4 = -(0.09/0.3) * math.log2(0.09/0.3) + (0.12/0.3) * math.log2(0.12/0.3) + (0.41/0.3) * math.log2(0.41/0.3)
 print(entropy_r4)
-print('values= for x<=0.7')
+print('values= for x<0.7')
 print(entropy - 0.7*entropy_r3 - entropy_r4*0.3)
 # y <= 0.6
 entropy_r5 = -(0.32/0.4) * math.log2(0.32/0.4) + (0.04/0.4) * math.log2(0.04/0.4) + (0.04/0.4) * math.log2(0.04/0.4)
 print(entropy_r1)
 entropy_r6 = -(0.09/0.6) * math.log2(0.09/0.6) + (0.42/0.6) * math.log2(0.42/0.6) + (0.41/0.6) * math.log2(0.41/0.6)
 print(entropy_r2)
-print('values for y<=0.6')
+print('values for y<0.6')
 print(entropy - 0.4*entropy_r5 - entropy_r6*0.6)
 
 # ----------------------------------------------------------------------
