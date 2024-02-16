@@ -106,9 +106,9 @@ def question2():
     # Answers are floats
     answer["(a) entropy_entire_data"] = 1.425
     # Infogain
-    answer["(b) x <= 0.2"] = 0.177
-    answer["(b) x <= 0.7"] = 1.046
-    answer["(b) y <= 0.6"] = 1.783 
+    answer["(b) x < 0.2"] = 0.177
+    answer["(b) x < 0.7"] = 1.046
+    answer["(b) y < 0.6"] = 1.783 
 
     # choose one of 'x=0.2', 'x=0.7', or 'x=0.6'
     answer["(c) attribute"] = "y = 0.6"  
@@ -116,13 +116,13 @@ def question2():
     # Use the Binary Tree structure to construct the tree
     # Answer is an instance of BinaryTree
     import utils as u
-    tree = u.BinaryTree("y <= 0.6")
+    tree = u.BinaryTree("y < 0.6")
     answer["(d) full decision tree"] = tree
-    tree = u.BinaryTree("y <= 0.6")
+    tree = u.BinaryTree("y < 0.6")
     #L2 Left
-    A = tree.insert_left("x <= 0.7")
+    A = tree.insert_left("x < 0.7")
     #L2 Right
-    B = tree.insert_right("x <= 0.2")
+    B = tree.insert_right("x < 0.2")
     A.insert_left("y")
     A.insert_right("n")
     B.insert_left("y")
@@ -286,10 +286,10 @@ def question6():
     #  and "float" is a floating point number (notice: <=)
     # The value could also be "A" or "B" if it is a leaf
     answer["a, level 1"] = "x <= 0.5"
-    answer["a, level 2, right"] ="y <= 0.4"
-    answer["a, level 2, left"] = "x <= A"
-    answer["a, level 3, left"] = "y <= B"
-    answer["a, level 3, right"] = "x <= 0.2"
+    answer["a, level 2, right"] ="y < 0.4"
+    answer["a, level 2, left"] = "x < A"
+    answer["a, level 3, left"] = "y < B"
+    answer["a, level 3, right"] = "x < 0.2"
     # run each datum through the tree. Count the number of errors and divide by number of samples. .
     # Since we have areas: calculate the area that is misclassified (total area is unity)
     # float between 0 and 1
