@@ -21,40 +21,40 @@ def question1():
     level2_left = {}
     level2_right = {}
   
-    level1["smoking"] = 1           #the average of yes and no entrophy
+    level1["smoking"] = 1.0           #the average of yes and no entrophy
     level1["smoking_info_gain"] = 0.3
 
-    level1["cough"] = -1            #the average of yes and no entrophy
+    level1["cough"] = -1.0           #the average of yes and no entrophy
     level1["cough_info_gain"] = 0.2
 
-    level1["radon"] = -1            #the average of yes and no entrophy
+    level1["radon"] = -1.0            #the average of yes and no entrophy
     level1["radon_info_gain"] = 0.2
 
-    level1["weight_loss"] = -1      #the average of yes and no entrophy
+    level1["weight_loss"] = -1.0      #the average of yes and no entrophy
     level1["weight_loss_info_gain"] = 0.1
 
-    level2_left["smoking"] = -1
+    level2_left["smoking"] = -1.0
     level2_left["smoking_info_gain"] = 0
-    level2_right["smoking"] = -1
+    level2_right["smoking"] = -1.0
     level2_right["smoking_info_gain"] = 0
 
-    level2_left["radon"] = 1
-    level2_left["radon_info_gain"] = 0
+    level2_left["radon"] = 1.0
+    level2_left["radon_info_gain"] = 0.0
     
-    level2_left["cough"] = 1
+    level2_left["cough"] = 1.0
     level2_left["cough_info_gain"] = 0.4
     
-    level2_left["weight_loss"] = 1
-    level2_left["weight_loss_info_gain"] = 0
+    level2_left["weight_loss"] = 1.0
+    level2_left["weight_loss_info_gain"] = 0.0
     
-    level2_right["radon"] = 0
+    level2_right["radon"] = 0.0
     level2_right["radon_info_gain"] = 0.6
 
-    level2_right["cough"] = 0
+    level2_right["cough"] = 0.0
     level2_right["cough_info_gain"] = 0.1
 
-    level2_right["weight_loss"] = 0
-    level2_right["weight_loss_info_gain"] = 0
+    level2_right["weight_loss"] = 0.0
+    level2_right["weight_loss_info_gain"] = 0.0
 
     
     answer["level1"] = level1
