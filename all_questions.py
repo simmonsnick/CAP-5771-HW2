@@ -79,22 +79,22 @@ def question1():
 
 #Q1 Calculations 
 #Entire Dataset
-import math
-entropy = -(5/10) * math.log2(5/10) - (5/10) * math.log2(5/10) 
+
+entropy = -(5/10) * u.log2(5/10) - (5/10) * u.log2(5/10) 
 #Smoking
-split = -(4/5) * math.log2(4/5) - (1/5) * math.log2(1/5)
-split = -(1/5) * math.log2(1/5) - (4/5) * math.log(4/5)
+split = -(4/5) * u.log2(4/5) - (1/5) * u.log2(1/5)
+split = -(1/5) * u.log2(1/5) - (4/5) * u.log(4/5)
 gain = entropy - split
 print(gain)
 
 #Chronic Cough
-split = -(4/5) * math.log2(4/5) - (3/5) * math.log2(3/5)
-split = -(1/5) * math.log2(1/5) - (2/5) * math.log2(2/5)
+split = -(4/5) * u.log2(4/5) - (3/5) * u.log2(3/5)
+split = -(1/5) * u.log2(1/5) - (2/5) * u.log2(2/5)
 gain  = entropy - split
 print(gain)
 #Weight loss
-split = -(3/5) * math.log2(3/5) - (2/5) * math.log2(2/5)
-split = -(2/5) * math.log2(2/5) - (3/5) * math.log2(3/5)
+split = -(3/5) * u.log2(3/5) - (2/5) * u.log2(2/5)
+split = -(2/5) * u.log2(2/5) - (3/5) * u.log2(3/5)
 gain = entropy - split
 print(gain)
 
@@ -134,27 +134,27 @@ def question2():
 #Entire Dataset
 #Class A = 0.41, Class B = 0.46, Class C = 0.13
 import math
-entropy = -(0.41) * math.log2(0.41) - (0.46) * math.log2(0.46) - (0.13) * math.log2(0.13) 
+entropy = -(0.41) * u.log2(0.41) - (0.46) * u.log2(0.46) - (0.13) * u.log2(0.13) 
 print("total entropy")
 print(entropy)
 # x <= 0.2
-entropy_r1 = -(0.16/0.2) * math.log2(0.16/0.2) - (0.04/0.2) * math.log2(0.04/0.2)
+entropy_r1 = -(0.16/0.2) * u.log2(0.16/0.2) - (0.04/0.2) * u.log2(0.04/0.2)
 print(entropy_r1)
-entropy_r2 =  -(0.09/0.8) * math.log2(0.09/0.8) - (0.3/0.8) * math.log2(0.3/0.8) - (0.41/0.8) * math.log2(0.41/0.8)
+entropy_r2 =  -(0.09/0.8) * u.log2(0.09/0.8) - (0.3/0.8) * u.log2(0.3/0.8) - (0.41/0.8) * u.log2(0.41/0.8)
 print(entropy_r2)
 print('values for x<0.2')
 print(entropy - 0.2*entropy_r1 - 0.8*entropy_r2)
 # x <= 0.7
-entropy_r3 = -(0.2/0.7) * math.log2(0.2/0.7) + (0.04/0.7) * math.log2(0.04/0.7) 
+entropy_r3 = -(0.2/0.7) * u.log2(0.2/0.7) + (0.04/0.7) * u.log2(0.04/0.7) 
 print(entropy_r3)
-entropy_r4 = -(0.09/0.3) * math.log2(0.09/0.3) + (0.12/0.3) * math.log2(0.12/0.3) + (0.41/0.3) * math.log2(0.41/0.3)
+entropy_r4 = -(0.09/0.3) * u.log2(0.09/0.3) + (0.12/0.3) * u.log2(0.12/0.3) + (0.41/0.3) * u.log2(0.41/0.3)
 print(entropy_r4)
 print('values= for x<0.7')
 print(entropy - 0.7*entropy_r3 - entropy_r4*0.3)
 # y <= 0.6
-entropy_r5 = -(0.32/0.4) * math.log2(0.32/0.4) + (0.04/0.4) * math.log2(0.04/0.4) + (0.04/0.4) * math.log2(0.04/0.4)
+entropy_r5 = -(0.32/0.4) * u.log2(0.32/0.4) + (0.04/0.4) * u.log2(0.04/0.4) + (0.04/0.4) * u.log2(0.04/0.4)
 print(entropy_r1)
-entropy_r6 = -(0.09/0.6) * math.log2(0.09/0.6) + (0.42/0.6) * math.log2(0.42/0.6) + (0.41/0.6) * math.log2(0.41/0.6)
+entropy_r6 = -(0.09/0.6) * u.log2(0.09/0.6) + (0.42/0.6) * u.log2(0.42/0.6) + (0.41/0.6) * u.log2(0.41/0.6)
 print(entropy_r2)
 print('values for y<0.6')
 print(entropy - 0.4*entropy_r5 - entropy_r6*0.6)
