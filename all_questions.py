@@ -67,10 +67,10 @@ def question1():
     tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
     A = tree.insert_left("radon")
     B = tree.insert_right("cough")
-    A.insert_left("y")
-    A.insert_right("n")
-    B.insert_left("y")
-    B.insert_right("n")
+    A.insert_left("A")
+    A.insert_right("B")
+    B.insert_left("A")
+    B.insert_right("B")
     answer["tree"] = tree  # use the Tree structure
     # answer["training_error"] = training_error
     answer["training_error"] = 0  
