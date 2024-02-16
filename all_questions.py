@@ -67,10 +67,10 @@ def question1():
     tree = u.BinaryTree("smoking")  # MUST STILL CREATE THE TREE *****
     A = tree.insert_left("radon")
     B = tree.insert_right("cough")
-    A.insert_left("A")
-    A.insert_right("B")
-    B.insert_left("A")
-    B.insert_right("B")
+    A.insert_left("y")
+    A.insert_right("n")
+    B.insert_left("y")
+    B.insert_right("n")
     answer["tree"] = tree  # use the Tree structure
     # answer["training_error"] = training_error
     answer["training_error"] = 0  
@@ -79,24 +79,6 @@ def question1():
 
 #Q1 Calculations 
 #Entire Dataset
-
-entropy = -(5/10) * u.log2(5/10) - (5/10) * u.log2(5/10) 
-#Smoking
-split = -(4/5) * u.log2(4/5) - (1/5) * u.log2(1/5)
-split = -(1/5) * u.log2(1/5) - (4/5) * u.log(4/5)
-gain = entropy - split
-print(gain)
-
-#Chronic Cough
-split = -(4/5) * u.log2(4/5) - (3/5) * u.log2(3/5)
-split = -(1/5) * u.log2(1/5) - (2/5) * u.log2(2/5)
-gain  = entropy - split
-print(gain)
-#Weight loss
-split = -(3/5) * u.log2(3/5) - (2/5) * u.log2(2/5)
-split = -(2/5) * u.log2(2/5) - (3/5) * u.log2(3/5)
-gain = entropy - split
-print(gain)
 
 # ----------------------------------------------------------------------
 
@@ -129,35 +111,6 @@ def question2():
     B.insert_left("y")
     B.insert_right("n")
     return answer
-
-#Q2 Calculations 
-#Entire Dataset
-#Class A = 0.41, Class B = 0.46, Class C = 0.13
-import math
-entropy = -(0.41) * u.log2(0.41) - (0.46) * u.log2(0.46) - (0.13) * u.log2(0.13) 
-print("total entropy")
-print(entropy)
-# x <= 0.2
-entropy_r1 = -(0.16/0.2) * u.log2(0.16/0.2) - (0.04/0.2) * u.log2(0.04/0.2)
-print(entropy_r1)
-entropy_r2 =  -(0.09/0.8) * u.log2(0.09/0.8) - (0.3/0.8) * u.log2(0.3/0.8) - (0.41/0.8) * u.log2(0.41/0.8)
-print(entropy_r2)
-print('values for x<0.2')
-print(entropy - 0.2*entropy_r1 - 0.8*entropy_r2)
-# x <= 0.7
-entropy_r3 = -(0.2/0.7) * u.log2(0.2/0.7) + (0.04/0.7) * u.log2(0.04/0.7) 
-print(entropy_r3)
-entropy_r4 = -(0.09/0.3) * u.log2(0.09/0.3) + (0.12/0.3) * u.log2(0.12/0.3) + (0.41/0.3) * u.log2(0.41/0.3)
-print(entropy_r4)
-print('values= for x<0.7')
-print(entropy - 0.7*entropy_r3 - entropy_r4*0.3)
-# y <= 0.6
-entropy_r5 = -(0.32/0.4) * u.log2(0.32/0.4) + (0.04/0.4) * u.log2(0.04/0.4) + (0.04/0.4) * u.log2(0.04/0.4)
-print(entropy_r1)
-entropy_r6 = -(0.09/0.6) * u.log2(0.09/0.6) + (0.42/0.6) * u.log2(0.42/0.6) + (0.41/0.6) * u.log2(0.41/0.6)
-print(entropy_r2)
-print('values for y<0.6')
-print(entropy - 0.4*entropy_r5 - entropy_r6*0.6)
 
 # ----------------------------------------------------------------------
 
@@ -327,6 +280,8 @@ def question7():
     return answer
 
 # ----------------------------------------------------------------------
+
+
 
 if __name__ == "__main__":
     answers = {}
