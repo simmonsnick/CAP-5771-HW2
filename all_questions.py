@@ -297,9 +297,9 @@ def question6():
     # Use u.BinaryTree to define the tree. Create your tree.
     # Replace "root node" by the proper node of the form "z <= float"
     import utils as u
-    tree = u.BinaryTree("x <= 0.5")
-    A = tree.insert_left("y <= 0.4")
-    B = tree.insert_right("x <= A")
+    tree = u.BinaryTree("x < 0.5")
+    A = tree.insert_left("y < 0.4")
+    B = tree.insert_right("x < A")
     answer["c, tree"] = tree
     return answer
 
